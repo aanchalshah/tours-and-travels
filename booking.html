@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Tour</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+    <div class="background-image">
+        <img src="images/bg.png" alt="Background Image">
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>EXPLORE INDIA, BOOK A TOUR</h1>
+        </header>
+
+        <div class="booking-form">
+            <h2>Select Booking Details</h2>
+            <form id="bookingForm">
+                <table class="input-table">
+                    <tr>
+                        <td><label for="fromDate">From Date:</label></td>
+                        <td><input type="date" id="fromDate" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="toDate">To Date:</label></td>
+                        <td><input type="date" id="toDate" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="destination">Destination:</label></td>
+                        <td><select id="destination" required>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Mumbai">Mumbai</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="members">Number of Members:</label></td>
+                        <td><input type="number" id="members" min="1" required></td>
+                    </tr>
+                </table>
+                <button type="button" onclick="searchTours()">Search Tours</button>
+
+            </form>
+        </div>
+
+        <!-- Tour Packages -->
+        <div class="tour-packages">
+            <!-- Tour packages will be dynamically added here -->
+
+
+        </div>
+        <!-- Payment Options -->
+        <div class="payment-options" style="display: none;">
+            <!-- Payment options will be displayed here -->
+        </div>
+        <!-- Booking Details -->
+        <div class="booking-details" style="display: none;">
+            <!-- Booking details will be displayed here -->
+        </div>
+
+
+    </div>
+
+    <script src="booking.js"></script>
+</body>
+
+</html>
